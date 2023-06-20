@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" >
+<head th:replace="~{mytemplate::head}">
+    <title>[[#{barra.titulo}]]</title>
+</head>
+<body>
+  <header th:replace="~{mytemplate::header}"></header>
+  <section th:replace="~{addbutton::addButton}"></section>
+  <section th:replace="~{addclient::addClient}"></section>
+  <section th:replace="~{clientlist::clientList}"></section>
+  <footer th:replace="~{mytemplate::footer}"></footer>
+</body>
+</html>

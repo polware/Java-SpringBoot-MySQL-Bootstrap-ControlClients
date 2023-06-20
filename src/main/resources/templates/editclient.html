@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{mytemplate::head}">
+    <title>[[#{cliente.editarCliente}]]</title>
+</head>
+<body>
+    <section th:fragment="editClient">
+        <form th:action="@{/save}" method="post" th:object="${cliente}" class="was-validated">
+
+            <input type="hidden" name="idCliente" th:field="*{idCliente}"/>
+            <section th:replace="~{editbutton::editButton}"></section>
+            <div id="details">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="text-center">[[#{cliente.editarCliente}]]</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label th:for="nombre">[[#{index.tabla-nombre}]]:</label>
+                                        <input type="text" name="nombre" class="form-control" required="true" th:field="*{nombre}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label th:for="apellido">[[#{index.tabla-apellido}]]:</label>
+                                        <input type="text" name="apellido" class="form-control" required="true" th:field="*{apellido}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label th:for="email">[[#{index.tabla-email}]]:</label>
+                                        <input type="email" name="email" class="form-control" required="true" th:field="*{email}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label th:for="telefono">[[#{index.tabla-telefono}]]:</label>
+                                        <input type="tel" name="telefono" class="form-control" th:field="*{telefono}"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label th:for="saldo">[[#{index.tabla-saldo}]]:</label>
+                                        <input type="number" name="saldo" class="form-control" required="true" th:field="*{saldo}" step="any"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

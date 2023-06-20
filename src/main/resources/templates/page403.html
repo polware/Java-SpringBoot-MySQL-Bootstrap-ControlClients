@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{mytemplate::head}">
+    <title>Error 403</title>
+</head>
+<body class="bg-dark text-white py-5">
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-2 text-center">
+            <p><i class="fa fa-exclamation-triangle fa-5x"></i><br/>Status Code: 403</p>
+        </div>
+        <div class="col-md-10">
+            <h3>¡Acceso denegado!</h3>
+            <p>Su usuario no tiene privilegios de acceso a esta página.</p>
+            <a class="btn btn-danger" th:href="@{/}">[[#{modify.back}]]</a>
+        </div>
+    </div>
+</div>
+<footer th:replace="~{mytemplate::footer}"></footer>
+</body>
+</html>

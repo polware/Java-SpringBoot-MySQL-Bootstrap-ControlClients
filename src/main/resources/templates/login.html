@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{mytemplate::head}">
+    <title>Sign in</title>
+</head>
+<body class="text-center">
+    <header th:replace="~{mytemplate::header}"></header>
+    <section id="actions" class="py-4 mb-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <!--Agregar botones -->
+            </div>
+        </div>
+    </section>
+    <section id="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="h3 mb-3 font-weight-normal">Please sign in</h3>
+                        </div>
+                        <div class="card-body">
+                            <form th:action="@{/login}" method="post" class="form-signing">
+                                <div th:if="${param.error}" class="alert alert-error text-danger">
+                                    Invalid username and password!
+                                </div>
+                                <div th:if="${param.logout}" class="alert alert-success text-success">
+                                    You have been logged out!
+                                </div>
+                                <div class="form-group">
+                                    <label th:for="username" class="sr-only">Username</label>
+                                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label th:for="password" class="sr-only">Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                                </div>
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Remember me
+                                    </label>
+                                </div>
+                                <button class="btn btn-lg btn-primary btn-block" value="login" type="submit">Sign in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer th:replace="~{mytemplate::footer}"></footer>
+</body>
+</html>
