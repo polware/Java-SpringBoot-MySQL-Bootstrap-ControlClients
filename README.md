@@ -7,17 +7,18 @@ Pequeño proyecto de práctica utilizando Java y Spring Boot.
 - Spring Security
 - Bootstrap
 - MySQL Driver
+- Spring Data JPA
 - Validation
 
 ## Output
  ### Page Login
-![Page_Login](Images/Page Login.jpg)
+![Page_Login](Images/PageLogin.jpg)
 
 ### Page Home
-![Page_Main](Images/Page Main.jpg)
+![Page_Main](Images/PageMain.jpg)
 
 ### Page Create Client
-![Page_Create](Images/Page Create.jpg)
+![Page_Create](Images/PageCreate.jpg)
 
 ### Page 403
-![Page_403](Images/Page 403.jpg)
+![Page_403](Images/Page403.jpg)
