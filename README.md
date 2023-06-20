@@ -1,7 +1,7 @@
 # Java-SpringBoot-MySQL-Bootstrap-ControlClients
 Pequeño proyecto de práctica utilizando Java y Spring Boot.
 
-## Libraries
+## Dependencies:
 - Spring Boot
 - Thymeleaf
 - Spring Security
@@ -10,7 +10,7 @@ Pequeño proyecto de práctica utilizando Java y Spring Boot.
 - Spring Data JPA
 - Validation
 
-## Output
+## Screenshots:
  ### Page Login
 ![Page_Login](Images/PageLogin.jpg)
 
