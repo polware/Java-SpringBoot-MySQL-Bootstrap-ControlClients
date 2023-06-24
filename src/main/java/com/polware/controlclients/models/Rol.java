@@ -14,11 +14,11 @@ import java.util.Objects;
  * Date: 7/06/2023
  * Time: 1:24 p. m.
  */
-@Entity
 @Getter
 @Setter
 @ToString
 @RequiredArgsConstructor
+@Entity
 @Table(name = "rol")
 public class Rol implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -27,8 +27,9 @@ public class Rol implements Serializable {
     private Long idRol;
     @NotEmpty
     private String nombre;
-    @NotEmpty
-    private Long idUsuario;
+    @ManyToOne
+    @JoinColumn(name = "id_usuario", referencedColumnName = "idUsuario")
+    private Usuario usuario;
 
     @Override
     public boolean equals(Object o) {

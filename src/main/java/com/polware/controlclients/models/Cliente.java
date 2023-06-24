@@ -16,11 +16,11 @@ import java.util.Objects;
  * Time: 8:10 p. m.
  */
 
-@Entity
 @Getter
 @Setter
 @ToString
 @RequiredArgsConstructor
+@Entity
 @Table(name = "cliente")
 public class Cliente implements Serializable {
     private static final long serialVersionUID = 1L;

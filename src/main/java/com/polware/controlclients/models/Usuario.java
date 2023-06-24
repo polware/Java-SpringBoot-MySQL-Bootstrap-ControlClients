@@ -14,11 +14,11 @@ import java.util.*;
  * Date: 7/06/2023
  * Time: 1:29 p. m.
  */
-@Entity
 @Getter
 @Setter
 @ToString
 @RequiredArgsConstructor
+@Entity
 @Table(name = "usuario")
 public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -29,10 +29,9 @@ public class Usuario implements Serializable {
     private String username;
     @NotEmpty
     private String password;
-    @OneToMany
-    @JoinColumn(name="idRol", referencedColumnName="idUsuario")
+    @OneToMany(mappedBy = "usuario")
     @ToString.Exclude
-    private List<Rol> roles = new ArrayList<>();
+    private List<Rol> roles;
 
     @Override
     public boolean equals(Object o) {
