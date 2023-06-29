@@ -34,7 +34,7 @@ public class SecurityConfig {
         http
                 .csrf()
                 .and()
-                .authorizeHttpRequests().requestMatchers("/webjars/**").permitAll()
+                .authorizeHttpRequests().requestMatchers("/webjars/**", "/favicon.ico", "/error", "/page403").permitAll()
                 .and()
                 .authorizeHttpRequests().requestMatchers("/", "/page403").hasAnyAuthority("ADMIN", "USER")
                 .and()
